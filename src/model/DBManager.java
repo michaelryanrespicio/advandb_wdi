@@ -6,4 +6,14 @@ public class DBManager {
 	private QueryBuilder qBuilder;
 	private double queryTime;
 	
+	//initializes the DB manager
+	private DBManager(){
+		connection = DBConnection.getInstance();
+		qBuilder = new QueryBuilder();
+	}
+	
+	public static DBManager getInstance(){
+		return dbManager;
+	}
+	
 }
